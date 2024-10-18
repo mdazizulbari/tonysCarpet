@@ -1,8 +1,13 @@
+import { HiOutlineMenuAlt4 } from "react-icons/hi";
+
 const Nav = () => {
   return (
-    <div className="px-6 py-4 flex bg-sky-400">
-      <p className="text-yellow-300 text-xl font-semibold">TONYS.CARPET</p>
+    <div>
+      <div className="px-6 py-4 flex justify-between items-center bg-primary">
+        <p className="text-secondary text-xl font-semibold">TONYS.CARPET</p>
+        <HiOutlineMenuAlt4 className="text-white text-xl font-bold" />
+      </div>
     </div>
-  )
-}
-export default Nav
+  );
+};
+export default Nav;
