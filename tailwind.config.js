@@ -7,11 +7,13 @@ export default {
       secondary: "#ffde59",
       black: "#000",
       white: "#fff",
+      text: "#666666",
+      username: "#999999",
     },
     extend: {
       fontFamily: {
-        display: 'poppins',
-      }
+        display: "poppins",
+      },
     },
   },
   plugins: [],
