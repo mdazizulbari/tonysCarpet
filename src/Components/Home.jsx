@@ -1,6 +1,7 @@
 import Loading from "./Loading";
 import Nav from "./partials/Nav";
 import siteLogo from "../../public/images/siteLogo.svg";
+import Footer from "./partials/Footer";
 
 const Home = () => {
   document.title = "example | Homepage";
@@ -8,14 +9,16 @@ const Home = () => {
   return Home ? (
     <div className="">
       <Nav />
-      <section className="h-[100vh] w-full flex flex-col justify-center items-center text-center">
+      <section className="hero h-[100vh] w-full flex flex-col justify-center items-center text-center">
         <img src={siteLogo} alt="" />
         <h1 className="text-3xl font-black">Reviving Your Carpet</h1>
         <h1 className="text-2xl text-white font-black">Restoring Your Space</h1>
       </section>
 
       <section className="testimonials px-8 flex flex-col items-center">
-        <h1 className="py-20 text-5xl text-secondary font-bold">Testimonials</h1>
+        <h1 className="py-20 text-5xl text-secondary font-bold">
+          Testimonials
+        </h1>
 
         <div className="cards_container flex flex-col gap-6">
           <div className="card p-8 flex flex-col gap-6 rounded-3xl bg-white">
@@ -50,6 +53,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   ) : (
     <Loading />
