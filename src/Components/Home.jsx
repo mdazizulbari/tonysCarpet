@@ -2,12 +2,13 @@ import Loading from "./Loading";
 import Nav from "./partials/Nav";
 import siteLogo from "../../public/images/siteLogo.svg";
 import Footer from "./partials/Footer";
+import ContactForm from "./partials/ContactForm";
 
 const Home = () => {
   document.title = "example | Homepage";
 
   return Home ? (
-    <div className="">
+    <div className=" relative">
       <Nav />
       <section className="hero h-[100vh] w-full flex flex-col justify-center items-center text-center">
         <img src={siteLogo} alt="" />
@@ -53,6 +54,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <ContactForm />
 
       <Footer />
     </div>
