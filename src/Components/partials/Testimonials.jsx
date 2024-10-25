@@ -26,7 +26,7 @@ const Testimonials = () => {
     },
   ];
   return (
-    <section className="testimonials px-8 py-20 flex flex-col items-center">
+    <section id="testimonials" className="testimonials px-8 py-20 flex flex-col items-center">
       <h1 className="py-20 text-5xl text-secondary font-bold">Testimonials</h1>
 
       <div className="cards_container flex flex-col gap-6">
