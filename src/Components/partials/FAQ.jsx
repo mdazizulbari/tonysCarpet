@@ -88,7 +88,7 @@ const FAQ = () => {
             </button>
             {/* Show answer if this is the active FAQ */}
             {activeIndex === index && (
-              <div className="p-4 text-text transition-all duration-300 ease-in-out">
+              <div className="p-4 text-text transition-all duration-600 ease-in-out">
                 {faq.answer}
               </div>
             )}

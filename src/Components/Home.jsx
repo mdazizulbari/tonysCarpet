@@ -5,6 +5,7 @@ import Footer from "./partials/Footer";
 import ContactForm from "./partials/ContactForm";
 import Testimonials from "./partials/Testimonials";
 import FAQ from "./partials/FAQ";
+import BeforeAfter from "./partials/BeforeAfter";
 
 const Home = () => {
   document.title = "example | Homepage";
@@ -17,6 +18,18 @@ const Home = () => {
         <h1 className="text-3xl font-black">Reviving Your Carpet</h1>
         <h1 className="text-2xl text-white font-black">Restoring Your Space</h1>
       </section>
+      <BeforeAfter
+        beforeImage={"/images/beforeAfter/beforeAfter1.avif"}
+        afterImage={"/images/beforeAfter/beforeAfter2.avif"}
+      />
+      <BeforeAfter
+        beforeImage={"/images/beforeAfter/beforeAfter3.avif"}
+        afterImage={"/images/beforeAfter/beforeAfter4.avif"}
+      />
+      <BeforeAfter
+        beforeImage={"/images/beforeAfter/beforeAfter5.avif"}
+        afterImage={"/images/beforeAfter/beforeAfter6.avif"}
+      />
       <FAQ />
       <Testimonials />
       <ContactForm />

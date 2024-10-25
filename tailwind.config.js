@@ -9,6 +9,7 @@ export default {
       white: "#fff",
       text: "#666666",
       username: "#999999",
+      transparent: "#00000000",
     },
     extend: {
       fontFamily: {
