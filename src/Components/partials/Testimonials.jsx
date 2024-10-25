@@ -1,45 +1,52 @@
-import siteLogo from "../../../public/images/siteLogo.svg";
-
 const Testimonials = () => {
+  const testimonialData = [
+    {
+      name: "Sarah Mitchell",
+      username: "@sarah_m_22",
+      profileImg: "../../../public/images/testimonialImg/SarahMitchell.avif",
+      text: "Tony saved my carpet! Quick, friendly, and affordable. Highly recommend.",
+    },
+    {
+      name: "Emily Roberts",
+      username: "@emrob_home",
+      profileImg: "../../../public/images/testimonialImg/EmilyRoberts.avif",
+      text: "Tony and his team installed vinyl flooring in my kitchen, and the transformation is stunning. They were punctual, respectful of my space, and made sure everything was cleaned up before leaving. The attention to detail was impressive. Very happy with the results!",
+    },
+    {
+      name: "Lisa Turner",
+      username: "@lisat_living",
+      profileImg: "../../../public/images/testimonialImg/LisaTurner.avif",
+      text: "Vinyl installation looks perfect! I’m impressed.",
+    },
+    {
+      name: "Jennifer Clarke",
+      username: "@jennyc.living",
+      profileImg: "../../../public/images/testimonialImg/JenniferClarke.avif",
+      text: "We were thinking of replacing the carpet entirely after a burn left an ugly mark. But Tony came in, assessed the situation, and told us it could be repaired for a fraction of the replacement cost. His attention to detail is incredible—after the repair, you can’t even tell where the damage was. Tony’s honesty and skill saved us a lot of money and hassle. It’s rare to find this level of professionalism these days!",
+    },
+  ];
   return (
-      <section className="testimonials px-8 py-20 flex flex-col items-center">
-        <h1 className="py-20 text-5xl text-secondary font-bold">
-          Testimonials
-        </h1>
+    <section className="testimonials px-8 py-20 flex flex-col items-center">
+      <h1 className="py-20 text-5xl text-secondary font-bold">Testimonials</h1>
 
-        <div className="cards_container flex flex-col gap-6">
-          <div className="card p-8 flex flex-col gap-6 rounded-3xl bg-white">
+      <div className="cards_container flex flex-col gap-6">
+        {testimonialData.map((data, index) => (
+          <div
+            key={index}
+            className="card p-8 flex flex-col gap-6 rounded-3xl bg-white"
+          >
             <div className="flex items-center gap-4">
-              <img src={siteLogo} alt="" className="w-16 rounded-full" />
+              <img src={data.profileImg} alt="" className="w-16 rounded-full" />
               <div>
-                <h4>Emily Roberts</h4>
-                <h6 className="text-username text-sm">@emrob_home</h6>
+                <h4>{data.name}</h4>
+                <h6 className="text-username text-sm">{data.username}</h6>
               </div>
             </div>
-            <p className="text-text">
-              Tony and his team installed vinyl flooring in my kitchen, and the
-              transformation is stunning. They were punctual, respectful of my
-              space, and made sure everything was cleaned up before leaving. The
-              attention to detail was impressive. Very happy with the results!
-            </p>
+            <p className="text-text">{data.text}</p>
           </div>
-          <div className="card p-8 flex flex-col gap-6 rounded-3xl bg-white">
-            <div className="flex items-center gap-4">
-              <img src={siteLogo} alt="" className="w-16 rounded-full" />
-              <div>
-                <h4>Emily Roberts</h4>
-                <h6 className="text-username text-sm">@emrob_home</h6>
-              </div>
-            </div>
-            <p className="text-text">
-              Tony and his team installed vinyl flooring in my kitchen, and the
-              transformation is stunning. They were punctual, respectful of my
-              space, and made sure everything was cleaned up before leaving. The
-              attention to detail was impressive. Very happy with the results!
-            </p>
-          </div>
-        </div>
-      </section>
-  )
-}
-export default Testimonials
+        ))}
+      </div>
+    </section>
+  );
+};
+export default Testimonials;
