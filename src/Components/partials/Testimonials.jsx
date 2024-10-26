@@ -29,7 +29,7 @@ const Testimonials = () => {
     {
       name: "Sarah Mitchell",
       username: "@sarah_m_22",
-      profileImg: "../../../public/images/testimonialImg/SarahMitchell.avif",
+      profileImg: "images/testimonialImg/SarahMitchell.avif",
       text: "Tony saved my carpet! Quick, friendly, and affordable. Highly recommend.",
     },
     {
@@ -41,13 +41,13 @@ const Testimonials = () => {
     {
       name: "Lisa Turner",
       username: "@lisat_living",
-      profileImg: "../../../public/images/testimonialImg/LisaTurner.avif",
+      profileImg: "images/testimonialImg/LisaTurner.avif",
       text: "Vinyl installation looks perfect! I’m impressed.",
     },
     {
       name: "Jennifer Clarke",
       username: "@jennyc.living",
-      profileImg: "../../../public/images/testimonialImg/JenniferClarke.avif",
+      profileImg: "images/testimonialImg/JenniferClarke.avif",
       text: "We were thinking of replacing the carpet entirely after a burn left an ugly mark. But Tony came in, assessed the situation, and told us it could be repaired for a fraction of the replacement cost. His attention to detail is incredible—after the repair, you can’t even tell where the damage was. Tony’s honesty and skill saved us a lot of money and hassle. It’s rare to find this level of professionalism these days!",
     },
   ];
