@@ -48,7 +48,7 @@ const ContactForm = () => {
           className="h-60 px-4 py-2 rounded-xl text-xl"
         />
         <input
-          className="block transition ease-in-out delay-300 hover:scale-110 hover:-translate-y-1 py-2 mt-4 text-white text-xl font-bold rounded-xl bg-black"
+          className="block transition ease-in-out delay-300 hover:scale-110 hover:-translate-y-1 py-2 mt-4 text-black text-xl font-bold rounded-xl bg-secondary"
           type="submit"
           value="Submit"
         />

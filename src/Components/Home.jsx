@@ -8,7 +8,7 @@ import FAQ from "./partials/FAQ";
 import BeforeAfter from "./partials/BeforeAfter";
 
 const Home = () => {
-  document.title = "example | Homepage";
+  document.title = "Tony's Carpet | Homepage";
 
   return Home ? (
     <div className="">
@@ -22,7 +22,7 @@ const Home = () => {
           alt=""
           className="w-full max-h-[700px] object-cover"
         />
-        <h1 className="md:mb-3 lg:mb-4 text-3xl md:text-5xl lg:text-6xl font-black">
+        <h1 className="md:mb-3 lg:mb-4 text-3xl md:text-5xl lg:text-6xl text-secondary font-black">
           Reviving Your Carpet
         </h1>
         <h1 className="text-2xl md:text-4xl lg:text-4xl text-white font-black">

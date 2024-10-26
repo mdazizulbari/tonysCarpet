@@ -38,9 +38,9 @@ const Nav = () => {
   return (
     <nav className="fixed w-full bg-primary z-10">
       <div className="px-8 py-4 flex justify-between items-center">
-        <p ref={logoRef} className="text-secondary text-xl font-semibold">
+        <HashLink ref={logoRef} smooth to="/#home" className="text-secondary text-xl font-semibold">
           TONYS.CARPET
-        </p>
+        </HashLink>
         <div className="sm:hidden">
           <button onClick={toggleMenu} className="text-white text-2xl">
             {isMenuOpen ? <AiOutlineClose /> : <TfiMenu />}
