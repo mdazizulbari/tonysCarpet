@@ -8,33 +8,50 @@ const ContactForm = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_bfz6j59', 'template_4js5fgu', form.current, {
-        publicKey: 'ymZkWeiLvKK93PI-B',
+      .sendForm("service_bfz6j59", "template_4js5fgu", form.current, {
+        publicKey: "ymZkWeiLvKK93PI-B",
       })
       .then(
         () => {
-          console.log('SUCCESS!');
-          e.target.reset()
+          console.log("SUCCESS!");
+          e.target.reset();
         },
         (error) => {
-          console.log('FAILED...', error.text);
-        },
+          console.log("FAILED...", error.text);
+        }
       );
   };
 
   return (
     <section id="contact" className="py-20 flex flex-col items-center">
-        <h1 className="py-20 text-5xl text-secondary font-bold">
-          Contact
-        </h1>
-      <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
+      <h1 className="py-20 text-5xl text-secondary font-bold">Contact</h1>
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        className="flex flex-col gap-4 lg:w-[40rem] md:w-[30rem]"
+      >
         <label className="block text-white text-xl">Name</label>
-        <input type="text" name="user_name" className="w-72 px-4 py-2 rounded-xl text-xl" />
+        <input
+          type="text"
+          name="user_name"
+          className="px-4 py-2 rounded-xl text-xl"
+        />
         <label className="block text-white text-xl">Email</label>
-        <input type="email" name="user_email" className="w-72 px-4 py-2 rounded-xl text-xl" />
+        <input
+          type="email"
+          name="user_email"
+          className="px-4 py-2 rounded-xl text-xl"
+        />
         <label className="block text-white text-xl">Message</label>
-        <textarea name="message" className="w-72 h-60 px-4 py-2 rounded-xl text-xl" />
-        <input className="block transition ease-in-out delay-300 hover:scale-110 hover:-translate-y-1 py-2 mt-4 text-white text-xl font-bold rounded-xl bg-black" type="submit" value="Submit" />
+        <textarea
+          name="message"
+          className="h-60 px-4 py-2 rounded-xl text-xl"
+        />
+        <input
+          className="block transition ease-in-out delay-300 hover:scale-110 hover:-translate-y-1 py-2 mt-4 text-white text-xl font-bold rounded-xl bg-black"
+          type="submit"
+          value="Submit"
+        />
       </form>
     </section>
   );

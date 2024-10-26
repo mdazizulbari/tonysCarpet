@@ -26,10 +26,13 @@ const Testimonials = () => {
     },
   ];
   return (
-    <section id="testimonials" className="testimonials px-8 py-20 flex flex-col items-center">
-      <h1 className="py-20 text-5xl text-secondary font-bold">Testimonials</h1>
+    <section
+      id="testimonials"
+      className="testimonials px-8 py-20 flex flex-col items-center"
+    >
+      <h1 className="py-20 text-5xl md:text-7xl text-secondary font-bold">Testimonials</h1>
 
-      <div className="cards_container flex flex-col gap-6">
+      <div className="cards_container md:max-w-xl flex flex-col gap-6">
         {testimonialData.map((data, index) => (
           <div
             key={index}

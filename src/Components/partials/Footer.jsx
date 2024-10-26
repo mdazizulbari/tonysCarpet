@@ -4,7 +4,11 @@ import siteLogo from "../../../public/images/siteLogo.svg";
 const Footer = () => {
   return (
     <div className="py-20 flex flex-col items-center">
-      <img src={siteLogo} alt="" className="w-4/5" />
+      <img
+        src={siteLogo}
+        alt=""
+        className="w-full max-h-[700px] object-cover"
+      />
       <div className="flex flex-col gap-6">
         <h1 className="px-20 text-2xl text-white text-center font-semibold">
           archondesgroup @gmail.com

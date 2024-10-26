@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const BeforeAfter = ({beforeImage , afterImage}) => {
+const BeforeAfter = ({ beforeImage, afterImage }) => {
   // State to manage image and button text
   const [isAfter, setIsAfter] = useState(false);
 
@@ -18,7 +18,7 @@ const BeforeAfter = ({beforeImage , afterImage}) => {
     >
       <button
         onClick={handleClick}
-        className="px-6 py-3 bg-black font-bold text-white rounded-full hover:bg-blue-600 transition-all duration-300"
+        className="px-6 py-3 bg-black font-bold text-white md:text-2xl lg:text-4xl rounded-full hover:bg-blue-600 transition-all duration-300"
       >
         {isAfter ? "Before Tony Came" : "After Tony Came"}
       </button>

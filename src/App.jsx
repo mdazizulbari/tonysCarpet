@@ -6,7 +6,7 @@ import Nav from "./Components/partials/Nav";
 
 const App = () => {
   return (
-    <main className="w-screen h- font-display bg-primary">
+    <main className="w-screen h- font-display bg-primary overflow-x-hidden">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<UrlNotFound />} />
