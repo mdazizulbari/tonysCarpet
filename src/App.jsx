@@ -1,8 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import Loading from "./Components/Loading";
-import UrlNotFound from "./Components/urlNotFound";
-import Nav from "./Components/partials/Nav";
+import UrlNotFound from "./Components/UrlNotFound";
 
 const App = () => {
   return (
