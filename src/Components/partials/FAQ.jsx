@@ -1,6 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const FAQ = () => {
+  const titleRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      titleRef.current,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 75%", // Adjust start position
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, []);
+
   // Sample FAQ data
   const faqs = [
     {
@@ -59,7 +83,10 @@ const FAQ = () => {
       id="faq"
       className="max-w-2xl mx-auto px-8 py-20 flex flex-col items-center"
     >
-      <h1 className="py-20 text-5xl text-secondary text-center md:text-7xl font-bold">
+      <h1
+        ref={titleRef}
+        className="py-20 text-5xl text-secondary text-center md:text-7xl font-bold"
+      >
         faq
       </h1>
       <div className="p-4 bg-white rounded-3xl space-y-4">

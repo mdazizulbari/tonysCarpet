@@ -1,4 +1,30 @@
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const Testimonials = () => {
+  const titleRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      titleRef.current,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 75%", // Adjust start position
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, []);
+
   const testimonialData = [
     {
       name: "Sarah Mitchell",
@@ -9,7 +35,7 @@ const Testimonials = () => {
     {
       name: "Emily Roberts",
       username: "@emrob_home",
-      profileImg: "../../../public/images/testimonialImg/EmilyRoberts.avif",
+      profileImg: "/images/testimonialImg/EmilyRoberts.avif",
       text: "Tony and his team installed vinyl flooring in my kitchen, and the transformation is stunning. They were punctual, respectful of my space, and made sure everything was cleaned up before leaving. The attention to detail was impressive. Very happy with the results!",
     },
     {
@@ -30,7 +56,12 @@ const Testimonials = () => {
       id="testimonials"
       className="testimonials px-8 py-20 flex flex-col items-center"
     >
-      <h1 className="py-20 text-5xl md:text-7xl text-secondary font-bold">Testimonials</h1>
+      <h1
+        ref={titleRef}
+        className="py-20 text-5xl md:text-7xl text-secondary font-bold"
+      >
+        Testimonials
+      </h1>
 
       <div className="cards_container md:max-w-xl flex flex-col gap-6">
         {testimonialData.map((data, index) => (

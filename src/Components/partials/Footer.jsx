@@ -1,5 +1,5 @@
-import React from "react";
 import siteLogo from "../../../public/images/siteLogo.svg";
+import React from "react";
 
 const Footer = () => {
   return (
@@ -10,9 +10,12 @@ const Footer = () => {
         className="w-full max-h-[700px] object-cover"
       />
       <div className="flex flex-col gap-6">
-        <h1 className="px-20 text-2xl text-white text-center font-semibold">
-          archondesgroup @gmail.com
-        </h1>
+        <a
+          href="mailto:archondesgroup@gmail.com"
+          className="px-20 text-2xl text-white text-center font-semibold"
+        >
+          archondesgroup@gmail.com
+        </a>
         <h1 className="text-sm text-white text-center">
           © 2024 TONYS.CARPET All Rights Reserved.
         </h1>

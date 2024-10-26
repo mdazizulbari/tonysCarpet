@@ -1,7 +1,31 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ContactForm = () => {
+  const titleRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      titleRef.current,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 75%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, []);
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -24,7 +48,12 @@ const ContactForm = () => {
 
   return (
     <section id="contact" className="py-20 flex flex-col items-center">
-      <h1 className="py-20 text-5xl md:text-7xl text-secondary font-bold">Contact</h1>
+      <h1
+        ref={titleRef}
+        className="py-20 text-5xl md:text-7xl text-secondary font-bold"
+      >
+        Contact
+      </h1>
       <form
         ref={form}
         onSubmit={sendEmail}
