@@ -34,7 +34,7 @@ const ContactForm = () => {
         <input type="email" name="user_email" className="w-72 px-4 py-2 rounded-xl text-xl" />
         <label className="block text-white text-xl">Message</label>
         <textarea name="message" className="w-72 h-60 px-4 py-2 rounded-xl text-xl" />
-        <input className="block py-2 mt-4 text-white text-xl font-bold rounded-xl bg-black" type="submit" value="Submit" />
+        <input className="block transition ease-in-out delay-300 hover:scale-110 hover:-translate-y-1 py-2 mt-4 text-white text-xl font-bold rounded-xl bg-black" type="submit" value="Submit" />
       </form>
     </section>
   );

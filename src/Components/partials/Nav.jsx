@@ -28,7 +28,7 @@ const Nav = () => {
   }, [isMenuOpen]);
 
   return (
-    <nav className="fixed w-full bg-primary">
+    <nav className="fixed w-full bg-primary z-10">
       <div className="px-8 py-4 flex justify-between items-center">
         <p ref={logoRef} className="text-secondary text-xl font-semibold">TONYS.CARPET</p>
         <div className="sm:hidden">
