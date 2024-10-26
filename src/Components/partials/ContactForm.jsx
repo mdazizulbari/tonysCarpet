@@ -24,7 +24,7 @@ const ContactForm = () => {
 
   return (
     <section id="contact" className="py-20 flex flex-col items-center">
-      <h1 className="py-20 text-5xl text-secondary font-bold">Contact</h1>
+      <h1 className="py-20 text-5xl md:text-7xl text-secondary font-bold">Contact</h1>
       <form
         ref={form}
         onSubmit={sendEmail}

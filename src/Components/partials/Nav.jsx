@@ -69,7 +69,7 @@ const Nav = () => {
       {/* Dropdown menu for mobile view */}
       {isMenuOpen && (
         <div
-          className="sm:hidden flex flex-col items-center bg-primary py-4"
+          className="sm:hidden flex flex-col items-center bg-primary py-4 border-b-2 border-white"
           ref={menuRef}
         >
           <HashLink
@@ -78,7 +78,7 @@ const Nav = () => {
             onClick={() => {
               toggleMenu();
             }} // Close menu on click
-            className="text-white font-semibold py-2"
+            className="text-white text-2xl font-semibold py-2"
           >
             Home
           </HashLink>
@@ -88,7 +88,7 @@ const Nav = () => {
             onClick={() => {
               toggleMenu();
             }} // Close menu on click
-            className="text-white font-semibold py-2"
+            className="text-white text-2xl font-semibold py-2"
           >
             FAQ
           </HashLink>
@@ -98,7 +98,7 @@ const Nav = () => {
             onClick={() => {
               toggleMenu();
             }} // Close menu on click
-            className="text-white font-semibold py-2"
+            className="text-white text-2xl font-semibold py-2"
           >
             Testimonials
           </HashLink>
@@ -108,7 +108,7 @@ const Nav = () => {
             onClick={() => {
               toggleMenu();
             }} // Close menu on click
-            className="text-white font-semibold py-2"
+            className="text-white text-2xl font-semibold py-2"
           >
             Contact
           </HashLink>
