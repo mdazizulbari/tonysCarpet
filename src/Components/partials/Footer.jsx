@@ -14,7 +14,7 @@ const Footer = () => {
           href="mailto:archondesgroup@gmail.com"
           className="px-20 text-2xl text-white text-center font-semibold"
         >
-          archondesgroup@gmail.com
+          archondesgroup @gmail.com
         </a>
         <h1 className="text-sm text-white text-center">
           © 2024 TONYS.CARPET All Rights Reserved.
