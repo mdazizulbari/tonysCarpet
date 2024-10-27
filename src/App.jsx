@@ -5,7 +5,7 @@ import UrlNotFound from "./Components/UrlNotFound";
 
 const App = () => {
   return (
-    <main className="w-screen h- font-display bg-primary overflow-x-hidden">
+    <main className="w-full font-display bg-primary">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<UrlNotFound />} />
