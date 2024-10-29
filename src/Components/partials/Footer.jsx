@@ -11,7 +11,7 @@ const Footer = () => {
       />
       <div className="flex flex-col gap-6">
         <a
-          href="mailto:archondesgroup@gmail.com"
+          href="mailto:tonycarpetguy@gmail.com"
           className="px-20 text-2xl text-white text-center font-semibold"
         >
           tonycarpetguy @gmail.com
